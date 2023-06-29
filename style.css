@@ -13,7 +13,7 @@ body {
     justify-content: center;
     font-family: sans-serif;
     background-color: #dac400;
-    background-image: url("./bg3.jpg"); /* Add the image URL here */
+    background-image: url("./img/bg3.jpg"); /* Add the image URL here */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -76,7 +76,7 @@ i {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 243, 216);
-    background-image: url("./bg4.jpg");
+    background-image: url("./img/bg4.jpg");
     transform-origin: left;
     transition: transform 0.5s;
 }
@@ -91,7 +91,9 @@ i {
 
 .front-content,
 .back-content {
-    width: 100%;
+    font-size: small;
+    text-align: center;
+    width: 95%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -119,7 +121,12 @@ i {
 }
 
 #p3 {
+    padding: 2px;
     z-index: 1;
+}
+
+#p1 {
+    z-index: 3;
 }
 
 /* Customization */
@@ -177,7 +184,7 @@ i {
 .page-title {
     font-size: 2.5em;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .sub-title {
@@ -193,26 +200,22 @@ i {
 
 
 
-/* Paper 2 Styling */
-.page2 .front {
-    background-color: #86753bbd; /* Change the color value for Page 2's front */
-}
-
-.page2 .back {
-    background-color: #86753bbd;/* Change the color value for Page 2's back */
-}
-
-/* Paper 3 Styling */
-.page3 .front {
-    background-color: #86753bbd; /* Change the color value for Page 3's front */
-}
-
-.page3 .back {
-    background-color: #86753bbd; /* Change the color value for Page 3's back */
-}
 
 
 
 .paget1 {
     font-size: 1px;
+}
+
+
+
+.history1 {
+    margin-top: 20px;
+    width: 240px;
+    height: 160px;
+}
+
+.history2 {
+    width: 260px;
+    height: 420px;
 }

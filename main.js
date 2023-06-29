@@ -6,6 +6,8 @@ const book = document.querySelector('#book');
 const paper1 = document.querySelector('#p1')
 const paper2 = document.querySelector('#p2')
 const paper3 = document.querySelector('#p3')
+const paper4 = document.querySelector('#p4')
+
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
@@ -13,7 +15,7 @@ nextBtn.addEventListener("click", goNext);
 
 // Business Logic
 let currentState = 1;
-let numOfPapers = 3;
+let numOfPapers = 4;
 let maxState = numOfPapers + 1;
 
 
@@ -46,9 +48,13 @@ function goNext() {
                 paper2.style.zIndex = 2;
                 break;
             case 3:
-                closeBook(false);
                 paper3.classList.add("flipped");
                 paper3.style.zIndex = 3;
+                break;
+            case 4:
+                closeBook(false);
+                paper4.classList.add("flipped");
+                paper4.style.zIndex = 4;
                 break;
             default: 
                 throw new Error("unkown state");    
