@@ -13,7 +13,13 @@ body {
     justify-content: center;
     font-family: sans-serif;
     background-color: #dac400;
+    background-image: url("./bg3.jpg"); /* Add the image URL here */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+/* Rest of the CSS code */
 
 /* Button */
 button {
@@ -56,7 +62,7 @@ i {
 
 .front {
     backface-visibility: hidden;
-    border-left: 3px solid #dac400;
+    border-left: 3px solid #1d0a0a52;
 }
 
 .front, 
@@ -69,7 +75,8 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 243, 216);
+    background-image: url("./bg4.jpg");
     transform-origin: left;
     transition: transform 0.5s;
 }
@@ -118,7 +125,9 @@ i {
 /* Customization */
 
 .book-title {
-    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(75, 66, 29, 0.856);
+    font-size: 2em;
     margin-bottom: 40px;
 }
 
@@ -147,3 +156,63 @@ i {
 }
 
 
+/* Customization */
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+}
+
+.title-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.magazine-heading {
+    font-size: 2em;
+    margin-top: 60px;
+}
+
+
+
+
+/* Paper 2 Styling */
+.page2 .front {
+    background-color: #86753bbd; /* Change the color value for Page 2's front */
+}
+
+.page2 .back {
+    background-color: #86753bbd;/* Change the color value for Page 2's back */
+}
+
+/* Paper 3 Styling */
+.page3 .front {
+    background-color: #86753bbd; /* Change the color value for Page 3's front */
+}
+
+.page3 .back {
+    background-color: #86753bbd; /* Change the color value for Page 3's back */
+}
+
+
+
+.paget1 {
+    font-size: 1px;
+}
