@@ -3,11 +3,12 @@ const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
 
-const paper1 = document.querySelector('#p1')
-const paper2 = document.querySelector('#p2')
-const paper3 = document.querySelector('#p3')
-const paper4 = document.querySelector('#p4')
-const paper5 = document.querySelector('#p5')
+const paper1 = document.querySelector('#p1');
+const paper2 = document.querySelector('#p2');
+const paper3 = document.querySelector('#p3');
+const paper4 = document.querySelector('#p4');
+const paper5 = document.querySelector('#p5');
+const paper6 = document.querySelector('#p6');
 
 // Event listeners
 prevBtn.addEventListener("click", goPrevious);
@@ -15,9 +16,8 @@ nextBtn.addEventListener("click", goNext);
 
 // Business Logic
 let currentState = 1;
-let numOfPapers = 5;
-let maxState = numOfPapers + 1;
-
+let numOfPapers = 6;
+let maxState = numOfPapers;
 
 function openBook() {
     book.style.transform = "translateX(50%)";
@@ -26,7 +26,7 @@ function openBook() {
 }
 
 function closeBook(isFirstPage) {
-    if(isFirstPage) {
+    if (isFirstPage) {
         book.style.transform = "translateX(0%)";
     } else {
         book.style.transform = "translateX(100%)";
@@ -36,8 +36,8 @@ function closeBook(isFirstPage) {
 }
 
 function goNext() {
-    if(currentState < maxState) { 
-        switch(currentState) {
+    if (currentState < maxState) {
+        switch (currentState) {
             case 1:
                 openBook();
                 paper1.classList.add("flipped");
@@ -56,12 +56,16 @@ function goNext() {
                 paper4.style.zIndex = 4;
                 break;
             case 5:
-                closeBook(false);
                 paper5.classList.add("flipped");
                 paper5.style.zIndex = 5;
                 break;
-            default: 
-                throw new Error("unkown state");    
+            case 6:
+                closeBook(false);
+                paper6.classList.add("flipped");
+                paper6.style.zIndex = 6;
+                break;
+            default:
+                throw new Error("unknown state");
         }
 
         currentState++;
@@ -69,8 +73,8 @@ function goNext() {
 }
 
 function goPrevious() {
-    if(currentState > 1) {
-        switch(currentState) {
+    if (currentState > 1) {
+        switch (currentState) {
             case 2:
                 closeBook(true);
                 paper1.classList.remove("flipped");
@@ -80,17 +84,22 @@ function goPrevious() {
                 paper2.classList.remove("flipped");
                 paper2.style.zIndex = 2;
                 break;
-            case 4: 
-                openBook()
+            case 4:
+                openBook();
                 paper3.classList.remove("flipped");
                 paper3.style.zIndex = 1;
                 break;
-            case 5: 
-                openBook()
+            case 5:
+                openBook();
                 paper4.classList.remove("flipped");
                 paper4.style.zIndex = 4;
                 break;
-            }
+            case 6:
+                openBook();
+                paper5.classList.remove("flipped");
+                paper5.style.zIndex = 5;
+                break;
+        }
 
         currentState--;
     }
