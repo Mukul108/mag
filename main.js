@@ -92,12 +92,12 @@ function goPrevious() {
             case 5:
                 openBook();
                 paper4.classList.remove("flipped");
-                paper4.style.zIndex = 4;
+                paper4.style.zIndex = 3;
                 break;
             case 6:
                 openBook();
                 paper5.classList.remove("flipped");
-                paper5.style.zIndex = 5;
+                paper5.style.zIndex = 4;
                 break;
         }
 
