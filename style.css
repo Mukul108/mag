@@ -234,6 +234,12 @@ i {
     font-size: 1px;
 }
 
+.pnd {
+    display: flex;
+    width: 110px;
+    height: 130px;
+}
+
 
 
 .history1 {
